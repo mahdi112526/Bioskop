@@ -14,15 +14,14 @@
 
   <nav class="navbar navbar-expand-lg bg-light">
 	  <div class="container">
-	    <a class="navbar-brand" href="">IXX Cinema</a>
+	    <a class="navbar-brand" href="">Trial Cinema</a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
 	    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 	      <div class="navbar-nav">
-	        <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
 	        <a class="nav-link" href="<?php echo base_url(); ?>film">Film</a>
-	        <a class="nav-link" href="">Lokasi</a>
+	        <a class="nav-link" href="<?php echo base_url(); ?>lokasi">Lokasi</a>
 	        <a class="nav-link" href="">Tayang</a>
 	      </div>
 	      </div>
