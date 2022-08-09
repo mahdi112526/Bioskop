@@ -1,4 +1,5 @@
 <?php  
+
 	class Film extends CI_Controller{
 
 		public function index($nama = '')
@@ -13,10 +14,17 @@
 
 		public function tambah()
 		{
-			$data['judul'] = 'Tambah Film';
-			$this->load->view('template/header',$data);
-			$this->load->view('Film/tambah',$data);
-			$this->load->view('template/footer');
+				$data['judul'] = 'Tambah Film';
+				$this->load->view('template/header',$data);
+				$this->load->view('Film/tambah',$data);
+				$this->load->view('template/footer');
+
+				if ($this->input->post('judul_film') <> "" && $this->input->post('tgl_launc') <> ""){
+					$this->load->model('Film_model');
+					$this->Film_model->tambahfilm();
+				}
+	
 		}
+
 	}
 ?>
