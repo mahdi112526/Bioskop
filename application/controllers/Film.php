@@ -10,5 +10,13 @@
 			 $this->load->view('Film/index',$data);
 			 $this->load->view('template/footer');
 		}
+
+		public function tambah()
+		{
+			$data['judul'] = 'Tambah Film';
+			$this->load->view('template/header',$data);
+			$this->load->view('Film/tambah',$data);
+			$this->load->view('template/footer');
+		}
 	}
 ?>
