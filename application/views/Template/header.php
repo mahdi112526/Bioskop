@@ -22,7 +22,8 @@
 	      <div class="navbar-nav">
 	        <a class="nav-link" href="<?php echo base_url(); ?>film">Film</a>
 	        <a class="nav-link" href="<?php echo base_url(); ?>lokasi">Lokasi</a>
-	        <a class="nav-link" href="">Tayang</a>
+	        <a class="nav-link" href="<?php echo base_url(); ?>tayang">Tayang</a>
+	        <a class="nav-link" href="<?php echo base_url(); ?>reservasi">Reservasi</a>
 	      </div>
 	      </div>
 	    </div>
