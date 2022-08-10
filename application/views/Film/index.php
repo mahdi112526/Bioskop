@@ -11,8 +11,11 @@
 	<div class="row">
 		<?php foreach ($Film as $list ) :  ?>
 			<div class="col-md-2">
-				<img src="https://www.pngitem.com/pimgs/m/110-1108543_transparent-blank-png-blank-poster-png-png-download.png" class="img-thumbnail">
-				<?php echo $list['judul_film'] ?>
+				<a href="<?php echo base_url();?>film/detail?id=<?php echo $list['kd_film'];?>">
+					<img src="https://www.pngitem.com/pimgs/m/110-1108543_transparent-blank-png-blank-poster-png-png-download.png" class="img-thumbnail">
+				</a>
+					<?php echo $list['judul_film'] ?>
+				
 			</div>	
 		<?php endforeach;  ?>
 	</div>
