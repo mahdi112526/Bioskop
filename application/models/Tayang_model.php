@@ -1,5 +1,5 @@
 <?php  
-print_r($_POST);
+// print_r($_POST);
 
 Class Tayang_model extends CI_Model
 {
