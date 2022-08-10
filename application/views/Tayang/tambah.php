@@ -9,32 +9,41 @@
 				<div class="card-body">
 					<form action="" method="post">
 						<div class="form-group">
-							<label for='kode_bioskop'>Kode Bioskop</label>
-							<div class="input-group-prepend">
-						    <label class="input-group-text" for="inputGroupSelect01">Options</label>
-						  </div>
-						  <select class="custom-select" id="inputGroupSelect01">
-						    <option selected>Choose...</option>
-						   	<?php 
-						   		foreach ($Lokasi as $kode_bioskop) :
-						   	?>		
-						   		<option value='<?php echo $kode_bioskop;?>'>One</option>	
-						   	<?php
-						   		endforeach;
-						   	?>
-						  </select>
+							<label for='lokasi' > Lokasi</label>
+							<select class="form-select" name="lokasi" id='lokasi' class="form-control">	
+								<option>Choose....</option>
+								<?php foreach ($bioskop_ls as $list) : 
+									$kd_bioskop = $list->kd_bioskop;
+									echo $kd_bioskop;
+								?>
+									<option value="<?php echo $kd_bioskop;?> "> <?php echo $list->kd_bioskop?> </option>;
+								<?php endforeach; ?>
+							</select>
 						</div>
 						<div class="form-group">
-							<label for='nama_bioskop'>Nama Bioskop</label>
-							<input type="text" name="nama_bioskop" id="nama_bioskop" class="form-control" required>
+							<label for='lokasi' > Film</label>
+							<select class="form-select" name="film" id="film">	
+								<option>Choose....</option>
+								<?php foreach ($film as $list) :
+									$tampil = $list->kd_film . " | " . $list->judul_film; 
+									$kd_film1 = $list->kd_film; ?>
+									<option value=" <?php echo $kd_film1;?>"> <?php echo $tampil;?></option>
+								 <?php endforeach; ?>
+
+								 <input type="hidden" name="judul_film" value="<?php echo $list->judul_film;?>">
+							</select>
 						</div>
 						<div class="form-group">
-							<label for='alamat'>Alamat Bioskop</label>
-							<input type="text" name="alamat" id="alamat" class="form-control" required>
+							<label for='tanggal'>Tanggal</label>
+							<input type="date" name="tanggal" id="tanggal" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label for='kota'>Kota</label>
-							<input type="text" name="kota" id="kota" class="form-control" required>
+							<label for='tanggal'>Jam</label>
+							<input type="time" name="jam" id="jam" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label for='jml_kursi'>Jumlah Kursi</label>
+							<input type="text" name="jml_kursi" id="jml_kursi" class="form-control" required>
 						</div>
 						<br>
 						<button type='submit' name='tambah' class="btn btn-primary float-right">Tambah Data</button>

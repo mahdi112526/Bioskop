@@ -78,6 +78,13 @@ Class Film_model extends CI_Model
 		$this->db->insert('Film',$data);
 		redirect('Film');
 	}
+
+	public function detailfilm($id)
+	{
+
+		$query = $this->db->query("select * from Film as Film where kd_film = '$id' ");
+		return $query->result();
+	}
 }
 
 ?>
