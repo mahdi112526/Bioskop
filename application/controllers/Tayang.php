@@ -28,10 +28,10 @@
 				$this->load->view('Tayang/tambah',$data);
 				$this->load->view('template/footer');
 
-				// if ($this->input->post('nama_bioskop') <> "" && $this->input->post('kode_bioskop') <> ""){
-				// 	$this->load->model('Lokasi_model');
-				// 	$this->Lokasi_model->TambahLokasi();
-				// }
+				if ($this->input->post('nama_bioskop') <> "" && $this->input->post('kode_bioskop') <> ""){
+					$this->load->model('Lokasi_model');
+					$this->Lokasi_model->TambahLokasi();
+				}
 	
 		}
 
